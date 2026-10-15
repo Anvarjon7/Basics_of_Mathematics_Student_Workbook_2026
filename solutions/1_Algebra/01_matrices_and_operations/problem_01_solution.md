@@ -1,87 +1,95 @@
-### Exercise 1: Matrix Size and Entries
+# Exercise 1: Matrix Size and Entries
 
-#### 1. Sizes of Matrices $A$ and $B$
+## Question
 
-* **Method / Definition:** The size (dimension) of a matrix is written as $m \times n$, where:
-* $m$ = number of horizontal **rows**
-* $n$ = number of vertical **columns**
+Given the matrices
 
+\[
+A=\begin{pmatrix}
+2 & -1 & 3\\
+0 & 4 & 5
+\end{pmatrix},
+\qquad
+B=\begin{pmatrix}
+1 & 0\\
+-2 & 3\\
+4 & 1
+\end{pmatrix}.
+\]
 
-* **Matrix $A$:**
+1. State the sizes of matrices \(A\) and \(B\).
+2. Read off the entries \(a_{12}\), \(a_{23}\), \(b_{21}\), and \(b_{32}\).
+3. Write the second row of \(A\) and the first column of \(B\) as vectors.
 
-$$A = \begin{pmatrix} 2 & -1 & 3 \\ 0 & 4 & 5 \end{pmatrix}$$
+## Solution
 
+### 1. Sizes of Matrices \(A\) and \(B\)
 
+**Method:** The size of a matrix is written as \(m\times n\), where \(m\) is the number of rows and \(n\) is the number of columns.
 
-Counting rows and columns:
-* Rows: 2 (Row 1: $\begin{pmatrix} 2 & -1 & 3 \end{pmatrix}$, Row 2: $\begin{pmatrix} 0 & 4 & 5 \end{pmatrix}$)
-* Columns: 3
-* **Result:** $A$ is of size **$2 \times 3$**.
+**Matrix \(A\):**
 
+Matrix \(A\) has 2 rows and 3 columns. Therefore,
 
-* **Matrix $B$:**
+\[
+\boxed{A\text{ is }2\times3}
+\]
 
-$$B = \begin{pmatrix} 1 & 0 \\ -2 & 3 \\ 4 & 1 \end{pmatrix}$$
+**Matrix \(B\):**
 
+Matrix \(B\) has 3 rows and 2 columns. Therefore,
 
+\[
+\boxed{B\text{ is }3\times2}
+\]
 
-Counting rows and columns:
-* Rows: 3
-* Columns: 2
-* **Result:** $B$ is of size **$3 \times 2$**.
+**Verification:** An \(m\times n\) matrix contains \(m\cdot n\) entries.
 
+- Matrix \(A\): \(2\cdot3=6\) entries.
+- Matrix \(B\): \(3\cdot2=6\) entries.
 
-* **Verification:** The total number of entries in an $m \times n$ matrix is $m \cdot n$.
-* For $A$: $2 \times 3 = 6$ entries (matching the 6 numbers present).
-* For $B$: $3 \times 2 = 6$ entries (matching the 6 numbers present).
+Both counts match the given matrices.
 
+### 2. Reading Matrix Entries
 
+**Method:** The entry \(m_{ij}\) refers to the element in row \(i\) and column \(j\). The row index comes first, followed by the column index.
 
----
+Reading the entries directly from the given matrices:
 
-#### 2. Reading Matrix Entries
+- \(a_{12}=-1\): row 1, column 2 of \(A\).
+- \(a_{23}=5\): row 2, column 3 of \(A\).
+- \(b_{21}=-2\): row 2, column 1 of \(B\).
+- \(b_{32}=1\): row 3, column 2 of \(B\).
 
-* **Method / Definition:** The entry $m_{ij}$ denotes the element located at **row $i$** and **column $j$** of matrix $M$ (always "row first, column second").
-* **Finding the entries:**
-* **$a_{12}$:** Look at matrix $A$, Row 1, Column 2 $\to$ **$-1$**
-* **$a_{23}$:** Look at matrix $A$, Row 2, Column 3 $\to$ **$5$**
-* **$b_{21}$:** Look at matrix $B$, Row 2, Column 1 $\to$ **$-2$**
-* **$b_{32}$:** Look at matrix $B$, Row 3, Column 2 $\to$ **$1$**
+Therefore,
 
+\[
+\boxed{a_{12}=-1,\quad a_{23}=5,\quad
+b_{21}=-2,\quad b_{32}=1}
+\]
 
-* **Result:**
+### 3. Row and Column Vectors
 
-$$a_{12} = -1, \quad a_{23} = 5, \quad b_{21} = -2, \quad b_{32} = 1$$
+**Method:** A row vector lists matrix entries horizontally, while a column vector lists them vertically.
 
+**Second row of \(A\):**
 
+The second row of \(A\) contains the entries \(0,4,5\). Written as a row vector,
 
----
+\[
+\boxed{r_2(A)=\begin{pmatrix}0&4&5\end{pmatrix}}
+\]
 
-#### 3. Row and Column Vectors
+Its size is \(1\times3\), matching the three columns of \(A\).
 
-* **Method / Definition:**
-* A row is taken horizontally across the matrix. It can be written as a row vector $\begin{pmatrix} x_1 & x_2 & \dots & x_n \end{pmatrix}$ (size $1 \times n$).
-* A column is taken vertically down the matrix. It can be written as a column vector $\begin{pmatrix} y_1 \\ y_2 \\ \dots \\ y_m \end{pmatrix}$ (size $m \times 1$).
+**First column of \(B\):**
 
+The first column of \(B\) contains the entries \(1,-2,4\). Written as a column vector,
 
-* **Second row of $A$:**
-* Take the entire second horizontal line of $A$:
+\[
+\boxed{c_1(B)=\begin{pmatrix}1\\-2\\4\end{pmatrix}}
+\]
 
-$$\mathbf{r}_2(A) = \begin{pmatrix} 0 & 4 & 5 \end{pmatrix}$$
+Its size is \(3\times1\), matching the three rows of \(B\).
 
-
-
-*(or as a standard coordinate vector $(0, 4, 5)$)*
-
-
-* **First column of $B$:**
-* Take the entire first vertical slice of $B$:
-
-$$\mathbf{c}_1(B) = \begin{pmatrix} 1 \\ -2 \\ 4 \end{pmatrix}$$
-
-
-
-
-* **Verification:**
-* Row 2 of $A$ has length 3, which matches the number of columns in $A$ ($n = 3$).
-* Column 1 of $B$ has height 3, which matches the number of rows in $B$ ($m = 3$).
+**Verification:** The extracted row has three entries, as does every row of \(A\). The extracted column has three entries, as does every column of \(B\).
